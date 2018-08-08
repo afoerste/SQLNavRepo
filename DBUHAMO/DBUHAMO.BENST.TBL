@@ -1,0 +1,54 @@
+CREATE TABLE BENST
+    (BENSTID                        NUMBER NOT NULL,
+    BNAME                          VARCHAR2(30 BYTE) NOT NULL,
+    ANREDE                         VARCHAR2(50 BYTE),
+    VNAME                          VARCHAR2(50 BYTE) NOT NULL,
+    NNAME                          VARCHAR2(50 BYTE) NOT NULL,
+    EMAIL                          VARCHAR2(320 BYTE) NOT NULL,
+    TELNR                          VARCHAR2(30 BYTE),
+    MOBIL                          VARCHAR2(30 BYTE),
+    PWORD                          VARCHAR2(40 BYTE),
+    LOEKZ                          VARCHAR2(1 BYTE),
+    INSDT                          DATE,
+    INSU                           NUMBER,
+    UPDDT                          DATE,
+    UPDU                           NUMBER,
+    LOGDT                          DATE)
+  SEGMENT CREATION IMMEDIATE
+  NOPARALLEL
+  LOGGING
+  MONITORING
+/
+
+COMMENT ON TABLE BENST IS 'Benutzerdaten-Stamm'
+/
+COMMENT ON COLUMN BENST.ANREDE IS 'Anrede'
+/
+COMMENT ON COLUMN BENST.BENSTID IS 'Identifikations-Nr.'
+/
+COMMENT ON COLUMN BENST.BNAME IS 'Anmeldename'
+/
+COMMENT ON COLUMN BENST.EMAIL IS 'Email des Anwenders'
+/
+COMMENT ON COLUMN BENST.INSDT IS 'Anmeldename erstellt am/um'
+/
+COMMENT ON COLUMN BENST.INSU IS 'Anmeldename erstellt von'
+/
+COMMENT ON COLUMN BENST.LOEKZ IS 'Status des Benutzerkonto: deaktiviert J/N'
+/
+COMMENT ON COLUMN BENST.LOGDT IS 'Letzter Login am/um'
+/
+COMMENT ON COLUMN BENST.MOBIL IS 'Mobiltelefon-Nr. des Anwenders'
+/
+COMMENT ON COLUMN BENST.NNAME IS 'Nachname des Anwenders'
+/
+COMMENT ON COLUMN BENST.PWORD IS 'Hash des Passworts'
+/
+COMMENT ON COLUMN BENST.TELNR IS 'Telefon-Nr. des Anwenders'
+/
+COMMENT ON COLUMN BENST.UPDDT IS 'Anmeldename aktualisiert am/um'
+/
+COMMENT ON COLUMN BENST.UPDU IS 'Anmeldename aktualisiert von'
+/
+COMMENT ON COLUMN BENST.VNAME IS 'Vorname des Anwenders'
+/
